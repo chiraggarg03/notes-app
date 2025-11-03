@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000'; // your backend URL
+const API_BASE_URL = 'http://3.110.114.167:3000'; // your backend URL
 
 const getAuthHeaders = () => {
   const token = localStorage.getItem('token');

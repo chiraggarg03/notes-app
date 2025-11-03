@@ -62,7 +62,7 @@ async function imageHandler() {
     formData.append('image', file);
 
     try {
-      const res = await fetch('http://localhost:3000/api/upload-image', { method: 'POST', body: formData });
+      const res = await fetch('http://3.110.114.167:3000/api/upload-image', { method: 'POST', body: formData });
       const data = await res.json();
 
       if (data.url) {
@@ -182,7 +182,7 @@ export default function NotesDashboard({ onLogout }) {
 
         for (const url of removedImages) {
           try {
-            await fetch('http://localhost:3000/api/delete-image', {
+            await fetch('http://3.110.114.167:3000/api/delete-image', {
               method: 'DELETE',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ imageUrl: url }),
